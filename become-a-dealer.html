@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to become an authorized Conceptine Dealer. Submit your partner contact and company details to join our leading SEA distribution network.">
+  <title>Become a Dealer - Conceptine | Partner Application</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/subpages.css">
+  <link rel="stylesheet" href="css/forms.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://conceptine.com/wp-content/uploads/2020/07/cropped-Conceptine-Favicon-32x32.png" sizes="32x32">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" id="header-logo">
+        <img src="https://conceptine.com/wp-content/uploads/2020/04/Conceptine-Logo-Web.png" alt="Conceptine Logo" class="logo-img">
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="business.html" class="nav-link">Business Services</a></li>
+          <li><a href="customer-service.html" class="nav-link">Customer Service</a></li>
+        </ul>
+        <a href="become-a-dealer.html" class="btn btn-primary">Become a Dealer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Subpage Hero Header -->
+    <section class="subpage-hero">
+      <div class="container">
+        <h1 class="subpage-title">Become a Dealer</h1>
+        <div class="subpage-breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>&raquo;</span>
+          <span class="active">Become a Dealer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dealer Form Section -->
+    <section class="dealer-form-section">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <span class="section-tag">Partnership Application</span>
+          <h2 class="section-title">Join Our Dealership Network</h2>
+          <p class="section-subtitle">Please fill in your Contact and Company information completely to establish a direct corporate account with full wholesale privileges.</p>
+        </div>
+
+        <div class="form-card">
+          <!-- Submission Alerts -->
+          <div class="form-alert success-alert" id="success-alert" style="display: none;">
+            <h4>Application Submitted</h4>
+            <p>Thank you. Your dealership application has been recorded. Our partner relations manager will follow up with registration documentation shortly.</p>
+          </div>
+          <div class="form-alert error-alert" id="error-alert" style="display: none;">
+            <h4>Submission Error</h4>
+            <p>We encountered an issue recording your application. Please verify that all required fields are complete and try again.</p>
+          </div>
+
+          <form id="dealer-application-form" class="custom-form" novalidate>
+            <!-- Honeypot Spam Protection -->
+            <div class="honeypot-field" style="display:none !important;" aria-hidden="true">
+              <label for="form_altemail">Alternate Email (Leave blank):</label>
+              <input type="email" id="form_altemail" name="form_altemail" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- SECTION 1: PARTNER CONTACT -->
+            <div class="form-section-block">
+              <h3 class="form-section-title">1. Partner Contact</h3>
+              
+              <!-- Field: Country Dropdown -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-country">Country *</label>
+                  <select id="dealer-country" name="country" required>
+                    <option value="" disabled selected>Select country</option>
+                    <option value="Malaysia">Malaysia (+60)</option>
+                    <option value="Singapore">Singapore (+65)</option>
+                    <option value="Myanmar">Myanmar (+95)</option>
+                    <option value="Cambodia">Cambodia (+855)</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span class="error-msg">Country selection is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Name & Position -->
+              <div class="form-row split-row">
+                <div class="form-group">
+                  <label for="dealer-name">Contact Person Name *</label>
+                  <input type="text" id="dealer-name" name="name" required placeholder="e.g. Bryant Lim">
+                  <span class="error-msg">Contact name is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-position">Position *</label>
+                  <input type="text" id="dealer-position" name="position" required placeholder="e.g. Purchasing Manager">
+                  <span class="error-msg">Position is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Email -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-email">Business Email *</label>
+                  <input type="email" id="dealer-email" name="email" required placeholder="e.g. partner@firm.com">
+                  <span class="error-msg">Please enter a valid business email.</span>
+                </div>
+              </div>
+
+              <!-- Field: Phone & Fax -->
+              <div class="form-row split-row">
+                <div class="form-group">
+                  <label for="dealer-phone">Phone Number *</label>
+                  <input type="tel" id="dealer-phone" name="phone" required placeholder="Select country first">
+                  <span class="error-msg">Valid phone number is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-fax">Fax Number</label>
+                  <input type="tel" id="dealer-fax" name="fax" placeholder="Select country first">
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2: COMPANY INFORMATION -->
+            <div class="form-section-block" style="margin-top: 48px;">
+              <h3 class="form-section-title">2. Company Information</h3>
+
+              <!-- Field: Company Name & Website -->
+              <div class="form-row split-row">
+                <div class="form-group">
+                  <label for="dealer-company-name">Registered Company Name *</label>
+                  <input type="text" id="dealer-company-name" name="companyName" required placeholder="e.g. Enterprise Solutions Sdn Bhd">
+                  <span class="error-msg">Company name is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-company-website">Company Website</label>
+                  <input type="url" id="dealer-company-website" name="companyWebsite" placeholder="e.g. https://firm.com">
+                </div>
+              </div>
+
+              <!-- Field: Address 1 & 2 -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-address1">Address Line 1 *</label>
+                  <input type="text" id="dealer-address1" name="address1" required placeholder="Street address, P.O. Box">
+                  <span class="error-msg">Address is required.</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-address2">Address Line 2</label>
+                  <input type="text" id="dealer-address2" name="address2" placeholder="Apartment, suite, unit, building, floor">
+                </div>
+              </div>
+
+              <!-- Field: City, State, Postcode -->
+              <div class="form-row three-split-row">
+                <div class="form-group">
+                  <label for="dealer-city">City *</label>
+                  <input type="text" id="dealer-city" name="city" required placeholder="e.g. Puchong">
+                  <span class="error-msg">City is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-state">State *</label>
+                  <input type="text" id="dealer-state" name="state" required placeholder="e.g. Selangor">
+                  <span class="error-msg">State is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-postcode">Postcode *</label>
+                  <input type="text" id="dealer-postcode" name="postcode" required placeholder="e.g. 47100">
+                  <span class="error-msg">Postcode is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Employees & Years in Business -->
+              <div class="form-row split-row">
+                <div class="form-group">
+                  <label for="dealer-employees">Number of Employees *</label>
+                  <select id="dealer-employees" name="employees" required>
+                    <option value="" disabled selected>Select size range</option>
+                    <option value="1-99">1 - 99</option>
+                    <option value="100-499">100 - 499</option>
+                    <option value="500-999">500 - 999</option>
+                    <option value="1000-2499">1000 - 2499</option>
+                    <option value="2500-4999">2500 - 4999</option>
+                    <option value="5000-9999">5000 - 9999</option>
+                    <option value="10000-19999">10000 - 19999</option>
+                    <option value="20000+">20000+</option>
+                  </select>
+                  <span class="error-msg">Select employee count range.</span>
+                </div>
+                <div class="form-group">
+                  <label for="dealer-years">Year In Business *</label>
+                  <input type="number" id="dealer-years" name="yearsInBusiness" required min="0" placeholder="e.g. 5">
+                  <span class="error-msg">Years in business is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Technology revenue goal -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-revenue">What technology revenue goal does your company have for this fiscal year? *</label>
+                  <input type="text" id="dealer-revenue" name="revenueGoal" required placeholder="e.g. USD 500,000 to improve network connectivity licenses">
+                  <span class="error-msg">This field is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Top 5 Vendors & % -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dealer-vendors">Who are your top 5 vendors and what percent of your business do they make up? *</label>
+                  <textarea id="dealer-vendors" name="topVendors" required rows="3" placeholder="e.g. 1. Cisco (30%), 2. D-Link (20%), 3. HPE (15%)..."></textarea>
+                  <span class="error-msg">This field is required.</span>
+                </div>
+              </div>
+
+              <!-- Field: Tech Data Account Account (Checkbox) -->
+              <div class="form-row">
+                <div class="form-checkbox-group">
+                  <input type="checkbox" id="dealer-techdata" name="hasTechDataAccount" value="true">
+                  <label for="dealer-techdata">Do you now or have you ever had a Tech Data account?</label>
+                </div>
+              </div>
+
+              <!-- Field: Technologies check list -->
+              <div class="form-row" style="margin-top: 24px;">
+                <label class="form-checkbox-grid-label">Select Technologies of Interest *</label>
+                <div class="form-checkbox-grid">
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-backup" value="Backup and Recovery"><label for="t-backup">Backup and Recovery</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-cloud" value="Cloud Computing"><label for="t-cloud">Cloud Computing</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-datacenter" value="Data Center"><label for="t-datacenter">Data Center</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-datarecov" value="Data Recovery"><label for="t-datarecov">Data Recovery</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-datamgt" value="Data Management"><label for="t-datamgt">Data Management</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-imaging" value="Digital Imaging and Presentation"><label for="t-imaging">Digital Imaging & Presentation</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-net" value="Networking"><label for="t-net">Networking</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-netmgt" value="Network Management"><label for="t-netmgt">Network Management</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-os" value="Operating Systems"><label for="t-os">Operating Systems</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-power" value="Power Protection"><label for="t-power">Power Protection</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-sec" value="Security"><label for="t-sec">Security</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-servers" value="Servers"><label for="t-servers">Servers</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-storage" value="Storage"><label for="t-storage">Storage</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-tele" value="Telecommunications"><label for="t-tele">Telecommunications</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-virtual" value="Virtualisation"><label for="t-virtual">Virtualisation</label></div>
+                  <div class="checkbox-item"><input type="checkbox" name="tech_interest" id="t-wireless" value="Wireless Technology (Wi-Fi)"><label for="t-wireless">Wireless Technology (Wi-Fi)</label></div>
+                </div>
+                <span class="error-msg tech-error" style="display: none; color: var(--primary-red); font-size: 13px; margin-top: 8px;">Please select at least one technology of interest.</span>
+              </div>
+            </div>
+
+            <!-- Application Submit -->
+            <div class="form-actions" style="margin-top: 40px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span class="btn-text">Submit Dealership Application</span>
+                <div class="spinner" style="display: none;"></div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer-site">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-link">
+          <img src="https://conceptine.com/wp-content/uploads/2020/04/Conceptine-Logo-Web.png" alt="Conceptine Logo" class="footer-logo-img">
+        </a>
+        <p class="footer-description">Conceptine goes beyond expectations and delivers results that meet service guarantees that will allow you to focus on your core business.</p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/conceptine" class="footer-social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-1 .5-2 2-2h1V0h-3c-3 0-5 2-5 5v3z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/conceptine" class="footer-social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://instagram.com/conceptine" class="footer-social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-col">
+        <h4 class="footer-title">Directory</h4>
+        <ul class="footer-links">
+          <li class="footer-link-item"><a href="index.html">Home</a></li>
+          <li class="footer-link-item"><a href="about.html">About Us</a></li>
+          <li class="footer-link-item"><a href="business.html">Business Services</a></li>
+          <li class="footer-link-item"><a href="customer-service.html">Customer Service</a></li>
+          <li class="footer-link-item"><a href="become-a-dealer.html">Become a Dealer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-brand">
+        <h4 class="footer-title">Headquarters</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Block E-2-12, IOI Boulevard, Jalan Kenari 5, Puchong 47170, Selangor, Malaysia</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>enquiry@conceptine.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; <span id="copyright-year"></span> Conceptine. All rights reserved.</p>
+      <p>ASEAN Strategic Tech Connectivity Provider</p>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp Button -->
+  <a href="https://wa.me/60380808888?text=Hi%20Conceptine%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20partnership%20program." target="_blank" class="whatsapp-sticky" id="whatsapp-widget">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.731-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97-1.861-1.868-4.339-2.897-6.97-2.899-5.437 0-9.862 4.372-9.866 9.802-.001 1.737.478 3.427 1.39 4.908l-.993 3.629 3.735-.972zm11.398-6.845c-.312-.156-1.848-.91-2.127-1.011-.279-.101-.483-.151-.686.152-.203.304-.785.962-.962 1.164-.177.203-.355.228-.668.072-.312-.156-1.32-.486-2.515-1.551-.93-.83-1.557-1.854-1.74-2.158-.182-.304-.02-.468.136-.623.14-.14.312-.365.468-.548.156-.183.208-.314.312-.523.104-.209.052-.391-.026-.548-.078-.157-.686-1.652-.94-2.26-.247-.594-.5-.512-.686-.521-.177-.008-.38-.01-.583-.01-.203 0-.533.076-.812.38-.279.304-1.066 1.039-1.066 2.532s1.09 2.935 1.242 3.138c.152.203 2.146 3.277 5.198 4.593.726.313 1.293.5 1.736.64.729.23 1.391.198 1.916.12.584-.087 1.848-.755 2.11-1.485.263-.73.263-1.353.185-1.484-.078-.132-.279-.208-.592-.364z"/>
+    </svg>
+    <span>Chat with Conceptine</span>
+  </a>
+
+  <!-- Global Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

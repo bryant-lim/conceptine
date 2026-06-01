@@ -1,0 +1,328 @@
+/* Form Card container */
+.form-card {
+  background-color: var(--bg-white);
+  padding: 50px 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-medium);
+  border: 1px solid rgba(28, 28, 30, 0.04);
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Form structure variables */
+.form-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 10px;
+}
+
+.form-row {
+  width: 100%;
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.three-split-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.8fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Inputs styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  border: 1.5px solid var(--border-light);
+  background-color: var(--bg-cream);
+  border-radius: 12px;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-orange);
+  background-color: var(--bg-white);
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.1);
+}
+
+/* Form checkboxes */
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.form-checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--border-light);
+  accent-color: var(--primary-red);
+  cursor: pointer;
+}
+
+.form-checkbox-group label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* Technologies Checkbox Grid */
+.form-checkbox-grid-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.form-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background-color: var(--bg-cream);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-red);
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Inline validation indicators */
+.form-group.invalid input,
+.form-group.invalid select,
+.form-group.invalid textarea {
+  border-color: var(--primary-red);
+  background-color: rgba(210, 31, 60, 0.02);
+}
+
+.form-group.invalid input:focus,
+.form-group.invalid select:focus,
+.form-group.invalid textarea:focus {
+  box-shadow: 0 0 0 4px rgba(210, 31, 60, 0.1);
+}
+
+.error-msg {
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-red);
+  margin-top: 4px;
+}
+
+.form-group.invalid .error-msg {
+  display: block;
+}
+
+/* Form submission alerts */
+.form-alert {
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.success-alert {
+  background-color: rgba(37, 211, 102, 0.1);
+  border: 1.5px solid #25D366;
+  color: #1b853e;
+}
+
+.success-alert h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #125e29;
+}
+
+.error-alert {
+  background-color: rgba(210, 31, 60, 0.1);
+  border: 1.5px solid var(--primary-red);
+  color: #8c1424;
+}
+
+.error-alert h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--primary-red);
+}
+
+/* Spinner Loading Animation */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--bg-white);
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Contact Layout Split */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-block-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.contact-block-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.contact-method-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: rgba(210, 31, 60, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-red);
+  flex-shrink: 0;
+}
+
+.method-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.method-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.method-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Responsive CSS for forms */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .form-card {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .three-split-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+}

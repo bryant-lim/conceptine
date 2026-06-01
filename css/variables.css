@@ -1,0 +1,25 @@
+:root {
+  /* Color System */
+  --bg-cream: #FAF9F6;
+  --bg-white: #FFFFFF;
+  --text-main: #1C1C1E;
+  --text-muted: #5C5C5E;
+  
+  --primary-red: #D21F3C;
+  --primary-orange: #FF6A00;
+  --accent-gradient: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+  
+  --border-light: #E5E5EA;
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+  
+  /* Fonts */
+  --font-main: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
