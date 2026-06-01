@@ -1,4 +1,8 @@
 /* Intro section layouts */
+.about-intro-section {
+  padding-bottom: 0;
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

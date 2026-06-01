@@ -236,10 +236,10 @@ nav.nav-menu {
 
 /* Footer Section */
 .footer-site {
-  background-color: #111112;
-  color: #A0A0A5;
+  background-color: #F2EFE9;
+  color: var(--text-muted);
   padding: 80px 0 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(28, 28, 30, 0.06);
 }
 
 .footer-grid {
@@ -264,13 +264,13 @@ nav.nav-menu {
 .footer-logo-img {
   height: 48px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 .footer-logo-text {
   font-size: 20px;
   font-weight: 800;
-  color: var(--bg-white);
+  color: var(--text-main);
   letter-spacing: -0.5px;
 }
 
@@ -288,16 +288,17 @@ nav.nav-menu {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(28, 28, 30, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--bg-white);
+  color: var(--text-main);
   transition: var(--transition-smooth);
 }
 
 .footer-social-icon:hover {
   background: var(--accent-gradient);
+  color: var(--bg-white);
   transform: translateY(-3px);
 }
 
@@ -308,9 +309,9 @@ nav.nav-menu {
 }
 
 .footer-title {
-  color: var(--bg-white);
+  color: var(--text-main);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -353,7 +354,7 @@ nav.nav-menu {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(28, 28, 30, 0.08);
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
