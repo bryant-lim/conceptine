@@ -183,7 +183,23 @@
               </div>
             </div>
 
-            <!-- Field 2: Name & Position -->
+            <!-- Field 2: Country (Dropdown) -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <select id="country" name="country" required>
+                  <option value="" disabled selected>Select your country</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Myanmar">Myanmar</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg">Please select your country.</span>
+              </div>
+            </div>
+
+            <!-- Field 3: Name & Position -->
             <div class="form-row split-row">
               <div class="form-group">
                 <label for="name">Your Name *</label>
@@ -197,7 +213,7 @@
               </div>
             </div>
 
-            <!-- Field 3: Email & Phone -->
+            <!-- Field 4: Email & Phone -->
             <div class="form-row split-row">
               <div class="form-group">
                 <label for="email">Business Email *</label>
@@ -208,22 +224,6 @@
                 <label for="phone">Phone Number *</label>
                 <input type="tel" id="phone" name="phone" required placeholder="e.g. +60 123456789">
                 <span class="error-msg">Phone number is required.</span>
-              </div>
-            </div>
-
-            <!-- Field 4: Country (Dropdown) -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="country">Country *</label>
-                <select id="country" name="country" required>
-                  <option value="" disabled selected>Select your country</option>
-                  <option value="Malaysia">Malaysia</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Myanmar">Myanmar</option>
-                  <option value="Cambodia">Cambodia</option>
-                  <option value="Other">Other</option>
-                </select>
-                <span class="error-msg">Please select your country.</span>
               </div>
             </div>
 

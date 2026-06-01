@@ -1,14 +1,10 @@
 // Forms Logic and Submission Handler
 
 // CONFIGURATION: Replace this URL with your published Google Apps Script Web App URL
-const GOOGLE_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz_placeholder/exec";
+const GOOGLE_SCRIPT_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyr6zZ4jvaspbeSIFjy9HFuMr2W3rph5O2--bjBiwXWy5Ogd5iEz6ZoePj02ERALs1G/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. DYNAMIC COUNTRY PHONE CODE PREFIX POPULATION
-  const countrySelector = document.getElementById("dealer-country");
-  const phoneField = document.getElementById("dealer-phone");
-  const faxField = document.getElementById("dealer-fax");
-
   const countryCallingCodes = {
     "Malaysia": "+60 ",
     "Singapore": "+65 ",
@@ -16,30 +12,60 @@ document.addEventListener("DOMContentLoaded", () => {
     "Cambodia": "+855 "
   };
 
-  if (countrySelector && phoneField) {
-    countrySelector.addEventListener("change", (e) => {
-      const selectedCountry = e.target.value;
-      const prefix = countryCallingCodes[selectedCountry] || "";
-      
-      // Only set prefix if user hasn't already entered data or if it's currently matching an old prefix
-      if (!phoneField.value || Object.values(countryCallingCodes).some(code => phoneField.value.trim() === code.trim())) {
-        phoneField.value = prefix;
-      }
-      
-      if (faxField) {
-        if (!faxField.value || Object.values(countryCallingCodes).some(code => faxField.value.trim() === code.trim())) {
-          faxField.value = prefix;
+  function setupPhonePrefixPopulation(countryId, phoneId, faxId = null) {
+    const selector = document.getElementById(countryId);
+    const phone = document.getElementById(phoneId);
+    const fax = faxId ? document.getElementById(faxId) : null;
+
+    if (selector && phone) {
+      selector.addEventListener("change", (e) => {
+        const selectedCountry = e.target.value;
+        const prefix = countryCallingCodes[selectedCountry] || "";
+
+        // Only set prefix if user hasn't already entered data or if it's currently matching an old prefix
+        if (!phone.value || Object.values(countryCallingCodes).some(code => phone.value.trim() === code.trim())) {
+          phone.value = prefix;
+        }
+
+        if (fax) {
+          if (!fax.value || Object.values(countryCallingCodes).some(code => fax.value.trim() === code.trim())) {
+            fax.value = prefix;
+          }
+        }
+      });
+    }
+  }
+
+  // Hook dynamic calling code prefixing for both forms
+  setupPhonePrefixPopulation("country", "phone");
+  setupPhonePrefixPopulation("dealer-country", "dealer-phone", "dealer-fax");
+
+  // 1b. REAL-TIME EMAIL FORMAT VALIDATION ON BLUR
+  const emailInputs = document.querySelectorAll('input[type="email"]');
+  emailInputs.forEach(emailInput => {
+    emailInput.addEventListener("blur", () => {
+      const formGroup = emailInput.closest(".form-group");
+      if (formGroup) {
+        const value = emailInput.value.trim();
+        // If empty, let the required check handle it. If not empty, check the format.
+        if (value !== "") {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            formGroup.classList.add("invalid");
+          } else {
+            formGroup.classList.remove("invalid");
+          }
         }
       }
     });
-  }
+  });
 
   // 2. CONTACT US FORM SUBMISSION
   const contactForm = document.getElementById("contact-us-form");
   if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      
+
       // Honeypot spam check (form_midname field is hidden by CSS. If populated, it is a bot)
       const honeypot = document.getElementById("form_midname");
       if (honeypot && honeypot.value !== "") {
@@ -85,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Special validation for technologies checklist
       const techCheckboxes = document.querySelectorAll('input[name="tech_interest"]:checked');
       const techError = document.querySelector(".tech-error");
-      
+
       let isTechValid = true;
       if (techCheckboxes.length === 0) {
         isTechValid = false;
@@ -139,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requiredInputs.forEach(input => {
       const formGroup = input.closest(".form-group");
-      
+
       // Validation checks
       let isFieldValid = true;
       if (input.type === "email") {
