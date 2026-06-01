@@ -210,47 +210,6 @@
   top: -1px;
 }
 
-/* Call to Action Banner */
-.cta-banner {
-  background: var(--accent-gradient);
-  color: var(--bg-white);
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-.cta-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-}
-
-.cta-title {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 12px;
-  letter-spacing: -0.5px;
-}
-
-.cta-text {
-  font-size: 16px;
-  max-width: 650px;
-  opacity: 0.9;
-}
-
-.btn-white-hover {
-  background: var(--bg-white);
-  color: var(--primary-red);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.btn-white-hover:hover {
-  background: var(--text-main);
-  color: var(--bg-white);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
 /* Responsive CSS for Home Specific Styles */
 @media (max-width: 1200px) {
   .capabilities-grid {
@@ -276,11 +235,6 @@
   .hero-subtitle {
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .cta-container {
-    flex-direction: column;
-    text-align: center;
   }
 }
 

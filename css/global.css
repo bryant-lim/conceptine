@@ -452,3 +452,68 @@ nav.nav-menu {
     text-align: center;
   }
 }
+
+/* Call to Action Banner */
+.cta-banner {
+  background: var(--accent-gradient);
+  color: var(--bg-white);
+  padding: 60px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cta-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  color: var(--bg-white) !important;
+}
+
+.cta-text {
+  font-size: 16px;
+  max-width: 650px;
+  opacity: 0.9;
+  color: var(--bg-white) !important;
+}
+
+.btn-white-hover {
+  background: var(--bg-white) !important;
+  color: var(--primary-red) !important;
+  border: 2px solid var(--primary-red) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-white-hover:hover {
+  background: var(--text-main) !important;
+  color: var(--bg-white) !important;
+  border-color: transparent !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 992px) {
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .cta-content {
+    align-items: center;
+    text-align: center;
+  }
+}
