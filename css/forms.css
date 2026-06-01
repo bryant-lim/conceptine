@@ -13,6 +13,13 @@
   gap: 24px;
 }
 
+.form-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
 /* Form structure variables */
 .form-section-title {
   font-size: 20px;
