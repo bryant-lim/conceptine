@@ -87,7 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         email: document.getElementById("email").value.trim(),
         phone: document.getElementById("phone").value.trim(),
         country: document.getElementById("country").value,
-        description: document.getElementById("description").value.trim()
+        description: document.getElementById("description").value.trim(),
+        privacyConsent: document.getElementById("privacy-consent").checked ? "Yes" : "No"
       };
 
       await submitFormData(contactForm, formData);
@@ -171,6 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (input.type === "email") {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         isFieldValid = emailRegex.test(input.value.trim());
+      } else if (input.type === "checkbox") {
+        isFieldValid = input.checked;
       } else if (input.tagName === "SELECT") {
         isFieldValid = input.value !== "";
       } else {
@@ -192,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.addEventListener("input", () => {
         if (formGroup) formGroup.classList.remove("invalid");
       });
-      if (input.tagName === "SELECT") {
+      if (input.tagName === "SELECT" || input.type === "checkbox") {
         input.addEventListener("change", () => {
           if (formGroup) formGroup.classList.remove("invalid");
         });
