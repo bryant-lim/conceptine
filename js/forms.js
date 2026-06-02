@@ -152,7 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
         revenueGoal: document.getElementById("dealer-revenue").value.trim(),
         topVendors: document.getElementById("dealer-vendors").value.trim(),
         hasTechDataAccount: document.getElementById("dealer-techdata").value,
-        technologiesOfInterest: techList
+        technologiesOfInterest: techList,
+        privacyConsent: document.getElementById("privacy-consent").checked ? "Yes" : "No"
       };
 
       await submitFormData(dealerForm, formData);
