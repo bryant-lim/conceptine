@@ -1,0 +1,5 @@
+# Robots.txt for Conceptine
+User-agent: *
+Allow: /
+
+Sitemap: https://conceptine.com/sitemap.xml
