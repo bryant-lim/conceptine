@@ -232,11 +232,16 @@
                 </div>
               </div>
 
-              <!-- Field: Tech Data Account Account (Checkbox) -->
+              <!-- Field: Tech Data Account (Dropdown) -->
               <div class="form-row">
-                <div class="form-checkbox-group">
-                  <input type="checkbox" id="dealer-techdata" name="hasTechDataAccount" value="true">
-                  <label for="dealer-techdata">Do you now or have you ever had a Tech Data account?</label>
+                <div class="form-group">
+                  <label for="dealer-techdata">Do you now or have you ever had a Tech Data account? *</label>
+                  <select id="dealer-techdata" name="hasTechDataAccount" required>
+                    <option value="" disabled selected>Select Yes or No</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  <span class="error-msg">Please select Yes or No.</span>
                 </div>
               </div>
 
